@@ -19,10 +19,3 @@ The following list provides EWC operation manuals for T-series chambers (with Al
 
 * [EWC v3.3 Manual for T-series](https://github.com/EspecNorthAmerica/ChamberConnectLibrary/wiki/EWCv3.3-Manual-for-T%E2%80%90series)
 
-# ChamberConnectLibrary Overview
-This library is intended to be used to connect to and control ESPEC North America environmental chambers that include the follow controllers: ESPEC GL, P300, SCP220, ES102; Watlow F4, F4T. Please refer to the README file on the ChamberConenctLibrary page (at [ChamberConnectLibrary](https://github.com/EspecNorthAmerica/ChamberConnectLibrary/tree/glclib-py3)) for further details. 
-|                               |                               |
-|-------------------------------|-------------------------------|
-| [GL](https://espec.com/na/products/controllers/gl_controller) | ESPEC SCP220 (discontinued)  |
-| [Watlow F4T](http://www.watlow.com/products/Controllers/Integrated-Multi-Function-Controllers/F4T-Integrated-Controller) | Watlow F4 (discontinued) |
-| [Espec P300](http://www.espec.com/na/chamber_faq/answer/p-300/) | ESPEC ES102 (discontinued) |
