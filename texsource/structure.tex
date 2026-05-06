@@ -1,0 +1,150 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                LaTeX Preample -- Custom configuration               %%%
+% 
+% author/maintainer: Paul Nong-Laolam <pnong-laolam@espec.com>
+% ESPEC North America, Inc.
+% 4141 Central Parkway
+% Hudsonville, MI 49426
+% 
+% copyright(c) 2020, 2021, 2022, 2023
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+\usepackage[document]{ragged2e}
+\usepackage[letterpaper,margin=1in]{geometry}  % set letter paper std-style
+\usepackage{tabu}
+\usepackage[english]{babel}                    % set std lanaguage 
+
+%%% SET FANCY HEADER & FOOTER                                           %%%
+% A setting required by ESPEC documentation layout and setting
+%
+\usepackage{fancyhdr}                          % enable fancy header styles
+\renewcommand{\headrulewidth}{0pt}             % remove header underline
+   \pagestyle{fancy}
+   \fancyhf{}
+   \rhead{{\textcopyright} ESPEC NORTH AMERICA, INC}
+   \lfoot{Rev 1.06 {\hspace{0.15in}} 5/2023}   % require content updates
+   \rfoot{ \leftmark {\hspace{0.08in}} | \thepage}
+
+%%%  FIX DEEPLY NESTED LOOPS                                            %%% 
+% Some sections have deeply nested loop that will cause run-away error
+% for control structure. 
+\usepackage{enumitem}
+\setlistdepth{9}                               % set up to 9 levels 
+\setlist[itemize,1]{label=$\bullet$}
+\setlist[itemize,2]{label=$\bullet$}
+\setlist[itemize,3]{label=$\bullet$}
+\setlist[itemize,4]{label=$\bullet$}
+\setlist[itemize,5]{label=$\bullet$}
+\setlist[itemize,6]{label=$\bullet$}
+\setlist[itemize,7]{label=$\bullet$}
+\setlist[itemize,8]{label=$\bullet$}
+\setlist[itemize,9]{label=$\bullet$}
+\renewlist{itemize}{itemize}{9}
+%%%%%%%%%%%%%%% END DEEPLY NESTED LOOP FIXES             %%%%%%%%%%%%%%%%%%
+%
+%%%%%%%%%%      print note on last page, even page             %%%%%%%%%%%%
+% This is the preamble directive for custom last page setting.
+% Eve/odd page wil lbe decided based on content filling after
+% processing PDF file. 
+%
+\pagenumbering{roman}                          % set standard numbering
+\newcommand*\cleartoleftpage{
+   \clearpage
+   \ifodd\value{page}\hbox{}\vspace*{\fill}
+   \thispagestyle{empty}\newpage\fi
+}
+
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath,tcolorbox}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e}                          % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0          % set condition for if pdftex
+   \usepackage[T1]{fontenc}
+   \usepackage[utf8]{inputenc}
+   \usepackage{textcomp}                       % provides euro and other symbols
+\else                                          % if luatex or xelatex
+   \usepackage{unicode-math}
+   \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+
+\IfFileExists{upquote.sty}{                    % apply upquote if available
+   \usepackage{upquote}                        % set stright quotes in verbatim
+                                               % environments 
+}{}
+
+\IfFileExists{microtype.sty}{                  % apply microtype if available
+   \usepackage[]{microtype}
+   \UseMicrotypeSet[protrusion]{basicmath}     % disable protrusion for tt fonts
+   }{}
+
+\IfFileExists{parskip.sty}{                    % apply parskip pkg if exists
+   \usepackage{parskip}
+   }{                                          % else, use this instead 
+     \setlength{\parindent}{0pt}
+     \setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+
+\usepackage[unicode=true]{hyperref}
+\hypersetup{
+   pdfborder={0 0 0},
+   breaklinks=true
+}
+
+\urlstyle{same}                                % don't use monospace font for urls
+\usepackage{longtable,booktabs}                % set ready for longtable bookmarks
+
+\IfFileExists{footnote.sty}{                   % correct footnotes in tables
+   \usepackage{footnote}                       % for if footnotes exist
+   \makesavenoteenv{longtable}
+}{}
+
+\usepackage{graphicx,grffile}
+\usepackage{placeins}
+\makeatletter
+
+\def\maxwidth{
+   \ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi
+}
+
+\def\maxheight{
+   \ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi
+}
+
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width=0.95\textwidth]
+%                                                 [width, height, ...]{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\setlength{\emergencystretch}{3em}             % prevent overfull lines
+\providecommand{\tightlist}{                   %
+   \setlength{\itemsep}{0pt}
+   \setlength{\parskip}{0pt}
+}
+
+%\setcounter{secnumdepth}{0}                   % unset counter for testing...
+\ifx
+   \paragraph\undefined
+\else                                           % redefine sub-paragraph to blend
+   \let\oldparagraph\paragraph                  % in and behave like sections 
+   \renewcommand{\paragraph}[1]{
+      \oldparagraph{#1}
+      \mbox{}
+   }
+\fi
+
+\ifx
+   \subparagraph\undefined
+\else
+   \let\oldsubparagraph\subparagraph
+   \renewcommand{\subparagraph}[1]{
+      \oldsubparagraph{#1}
+      \mbox{}
+   }
+\fi
+
+\makeatletter
+\def\fps@figure{htbp}                           % set default figure palcement to htbp
+                                                % force placement next to text/descript 
+\makeatother                                    

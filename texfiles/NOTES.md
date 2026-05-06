@@ -1,0 +1,1 @@
+directory to hold TeX files from the conversion process of pandoc and LaTeX extraction, unformatted and without the required format tex for ESPEC Web Controller User's Manual.

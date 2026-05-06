@@ -1,0 +1,68 @@
+\documentclass[11pt,twoside,openany]{book}
+%
+% author, title: Paul Nong-Laolam, Software Engineer
+% company: 
+%    ESPEC North America, Inc.
+%    4141 Central Parkway
+%    Hudsonville, MI 49426 (USA)
+% date: March 2022
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PREAMBLE
+% --------
+\input{structure}       % insert commands to build the 
+                                 % structure of the document
+\input{ch-title-format} % insert chapter title format commands 
+%
+% END PREAMBLE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%
+% FRONT MATTER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\input{copyright-title-page}  % ESPEC copyright notice
+\cleardoublepage 
+\tableofcontents              % set table of contents
+\cleardoublepage              % cleardouble page 
+\pagenumbering{arabic}        % turn on page numbering
+%
+% MAIN MATTER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% -----------
+%
+% PART 1
+% Introduction
+\part{Introduction}
+\include{part1}          % include chapter 1-3
+\include{about}
+
+% PART II: TYPHOON CHAMBER
+\part{T-Series Chamber}
+\include{typhoon}
+
+% PART III: CHAMBER WITH F4T
+\part{ESPEC Chamber with F4T} 
+\include{f4t} 
+
+% PART IV: CHAMBER WITH F4
+\part{ESPEC Chamber with F4}
+\include{f4} 
+
+% PART V: CHAMBER WITH P300
+\part{ESPEC P300 Chamber} 
+\include{p300} 
+
+% PART VI: ESPEC SCP220 CHAMBER
+\part{ESPEC SCP220 Chamber}
+\include{scp220} 
+
+% PART VII: ESPEC ES102 CHAMBER
+\part{ESPEC ES102 Chamber}
+\include{es102} 
+
+% PART VIII: SETTINGS CHAPTER FOR ALL PLCS
+\part{Settings Menu} 
+\include{settings}
+
+% VERSION CONTROL
+\input{version-note} 
+
+% END MAIN MATTER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

@@ -1,0 +1,1 @@
+directory to hold all LaTeX source files complete with markdown conversion, format manipulation, etc, ready to LaTeX processing into PDF. 
