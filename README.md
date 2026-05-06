@@ -1,9 +1,11 @@
 # ESPEC Web Controller V3.3 Manual
 
-> Author: Paul Nong-Laolam
-> Company: ESPEC North America
-> Date: March 2022; May 2026 
-> Created and maintained by Paul Nong-Laolam. 
+```text
+Author: Paul Nong-Laolam
+ESPEC North America
+May 2026 
+Created and maintained by Paul Nong-Laolam. 
+```
 
 ## Changes made in EWC V3.3
 
