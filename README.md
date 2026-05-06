@@ -1,9 +1,9 @@
 # ESPEC Web Controller V3.3 Manual
 
-Author: Paul Nong-Laolam  
-Company: ESPEC North America , 4141 Central Parkway, Hudsonville, MI 49426
-Date: March 2022; May 2026 
-Created and maintained by Paul Nong-Laolam. 
+> Author: Paul Nong-Laolam  
+> Company: ESPEC North America , 4141 Central Parkway, Hudsonville, MI 49426
+> Date: March 2022; May 2026 
+> Created and maintained by Paul Nong-Laolam. 
 
 ## Changes made in EWC V3.3
 
