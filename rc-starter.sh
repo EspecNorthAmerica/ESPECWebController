@@ -1,4 +1,11 @@
 #!/bin/bash
+#####################################################################
+# author: Paul Nong-Laolam <pnong-laolam@espec.com>
+# company:
+#    ESPEC North America, Inc.
+#    4141 Central Parkway
+#    Hudsoneville, MI 49426
+#####################################################################
 # MIT License
 #
 # Copyright (c) 2022-26 Paul Nong-Laolam
@@ -20,12 +27,7 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
-#####################################################################
-# author: Paul Nong-Laolam <pnong-laolam@espec.com>
-# company:
-#    ESPEC North America, Inc.
-#    4141 Central Parkway
-#    Hudsoneville, MI 49426
+
 #####################################################################
 # filename: rc-starter.sh
 # update: March 2022,

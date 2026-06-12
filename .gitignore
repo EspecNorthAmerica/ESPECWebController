@@ -3,6 +3,10 @@
 # Learn more about .gitignore:
 #     https://www.atlassian.com/git/tutorials/saving-changes/gitignore
 
+# ignore folders containing image files
+legacy/
+figures/
+
 # Compiled Java class files
 *.class
 
